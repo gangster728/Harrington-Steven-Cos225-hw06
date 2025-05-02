@@ -53,7 +53,9 @@ public class TreeNode<T>{
         if (node == null){
             return;
         }
-        System.out.println(node.getElement());
+        if (node.getElement() !=  "-") {
+           System.out.print(node.getElement() + " "); 
+        }
         preorder(node.getLeft());
         preorder(node.getRight());
     }
@@ -65,7 +67,9 @@ public class TreeNode<T>{
         }
         postorder(node.getLeft());
         postorder(node.getRight());
-        System.out.println(node.getElement());
+        if (node.getElement() != "-"){
+           System.out.print(node.getElement() + " ");  
+        }
     }
 
     //O(n)   //Null node = -1; Leaf node = 0; Anything else: 1 + max of descendants
